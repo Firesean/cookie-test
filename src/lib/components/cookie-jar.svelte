@@ -24,7 +24,6 @@
   <div>
     {#if cookiesEnabled}
       <p>Cookies are enabled.</p>
-
     {:else}
       <p> Cookies are not enabled </p>
     {/if}
