@@ -7,7 +7,7 @@ export async function POST({ request, cookies, url }) {
   if (cookiesEnabled){
     let date = new Date();
     date.setDate(date.getDate() + 7);
-    cookies.set('Cookie Monster', "Cookie Monster's Revenge", {expires: date, path:"/", sameSite:"none"});
+    cookies.set('Cookie Monster', "Cookie Monster's Revenge", {expires: date, path:"/", sameSite:"none", "Access-Control-Allow-Origin": "https://preflect-ads-contact-us.vercel.app/", "Access-Control-ALlow-Credentials":true});
   }
 
   return json({ cookiesEnabled });
