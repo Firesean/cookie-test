@@ -9,16 +9,13 @@
         cookiesEnabled = navigator.cookieEnabled;
   
         if (cookiesEnabled) {
-          const response = await fetch("../api/set-cookie", {
+          const response = await fetch("/api/set-cookie", {
               method:"POST",
               headers: {
-                // "Content-Type": "application/json",
+                "Content-Type": "application/json",
               },
-              body: JSON.stringify(cookiesEnabled)
+              body: JSON.stringify({cookiesEnabled})
             });
-
-          console.log(response);
-          document.cookie = "testCookie=Hello; expires=Fri, 31 Dec 9999 23:59:59 GMT";
         }
       }
     });
@@ -27,5 +24,8 @@
   <div>
     {#if cookiesEnabled}
       <p>Cookies are enabled.</p>
+
+    {:else}
+      <p> Cookies are not enabled </p>
     {/if}
   </div>
