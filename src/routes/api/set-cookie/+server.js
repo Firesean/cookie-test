@@ -8,7 +8,7 @@ export async function POST({ request, cookies, url }) {
     let date = new Date();
     date.setDate(date.getDate() + 7);
     cookies.set('Cookie Monster', "Cookie Monster's Revenge", {expires: date, path:"/"});
-    console.log(cookies.getAll());
+    // console.log(cookies.getAll());
   }
 
   return json({ cookiesEnabled });
