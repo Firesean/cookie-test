@@ -14,7 +14,7 @@
               headers: {
                 // "Content-Type": "application/json",
               },
-              body: "test"
+              body: JSON.stringify(cookiesEnabled)
             });
 
           console.log(response);
